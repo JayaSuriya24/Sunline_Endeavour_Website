@@ -159,3 +159,92 @@ nav .fa {
         cursor: pointer;
     }
 }
+
+/* About Us Section Properties */
+.row {
+    /* Flex display into two div */
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us {
+    /* alignments of about us section */
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    /* adjustable flex view and spacing */
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img {
+    /* image width */
+    width: 80%;
+}
+
+.about-col h1 {
+    /* no spacing on top and alignment */
+    text-align: center;
+    padding-top: 0;
+}
+
+.about-col p {
+    /* Text size and spacing */
+    font-size: 13px;
+    padding: 15px 0 25px;
+
+}
+
+.read-more-text {
+    display: none;
+}
+
+.read-more-text--show {
+    display: inline;
+}
+
+.red-btn {
+    /* Btn style and color */
+    border: 1px solid black;
+    background: transparent;
+    color: black;
+}
+
+.red-btn:hover {
+    /* Btn hover effect */
+    color: white;
+}
+
+/*  @media query of About Us Section properties  */
+@media(max-width:700px) {
+    .row {
+        /* Flex display into two div */
+        margin-top: 5%;
+        display: block;
+        justify-content: space-between;
+    }
+
+    .about-us {
+        /* alignments of about us section */
+        width: 80%;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .about-col img {
+        /* image width */
+        width: 90%;
+    }
+
+    .about-col p {
+        /* Text size and spacing */
+        font-size: 11px;
+        padding: 12px 0 20px;
+    }
+}
