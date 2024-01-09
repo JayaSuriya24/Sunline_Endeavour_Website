@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunline Endeavour</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./Images/logo.jpg">
+    <link rel="icon" href="./Resources/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
@@ -16,7 +16,33 @@
 
 <body>
     <!-- Header Section -->
+    <section class="header">
+        <nav>
+            <a href="index.html" id="logo">
+                <h2 id="indusName">Sunline Endavour</h2>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-con">About Us</a></li>
+                    <li><a href="#products-con">Products</a></li>
+                    <li><a href="#details-con">Products Details</a></li>
+                    <li><a href="#contact-us-con">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
 
+        <div class="text-box">
+            <h1>Sunline Welding Electrodes</h1>
+            <p>For the past 14 years, <b>Sunline Welding Electrodes</b> is devoted to the development of quality welding
+                consumables.Our production team is highly skilled and we always aim to give zero defect products to our
+                customers. Our quality assurance team always believes in continuous improvement in our products keeping
+                in view customer's requirement.</p>
+            <a href="#about-con" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
     <!-- About-Us Section  -->
   
     <!-- Product Section -->
@@ -25,7 +51,10 @@
     
     <!-- Contact Us -->
   
+   
     <!-- Footer  Section -->
+
+    <script src="Script.js"></script>
 
 </body>
 

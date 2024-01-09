@@ -9,3 +9,153 @@ html {
     /* To Scroll smoothly */
     scroll-behavior: smooth;
 }
+
+/* Header Section properties */
+.header {
+    /* Background image for the header part */
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(2, 4, 10, 0.616), rgba(2, 3.5, 10, 0.7)), url(./Resources/logo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    /* Aligns flex items in stright line inside the nav (div) */
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    /* Text color and space between the text from top */
+    color: white;
+    text-decoration: none;
+    padding-top: 10;
+}
+
+.nav-links {
+    /* Text align right  */
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    /* List of Items are to align in stright line  */
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    /* To change the font size of list items and color */
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    /* Before UnderLine hover effect  */
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #B0C4DE;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    /* After UnderLine hover effect  */
+    color: #B0C4DE;
+    width: 100%;
+}
+
+.text-box {
+    /* Text -Color -Alignment -transform*/
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    /* text font-size */
+    font-size: 40px;
+}
+
+.text-box p {
+    /* text -margin -color -Font-size */
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.hero-btn {
+    /* Btn -border -color -size //  Before Hover effect */
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    /* After hover effect */
+    border: 1px solid#B0C4DE;
+    background: #B0C4DE;
+    transition: 1.5s;
+}
+
+nav .fa {
+    display: none;
+}
+
+/*  @media query of Header Section properties  */
+@media(max-width:700px) {
+    /* Display width limit */
+
+    .text-box h1 {
+        /* text -size */
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        /* list items view as block */
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #B0C4DE;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -220px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .nav-links ul {
+        padding: 15px;
+    }
+
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
