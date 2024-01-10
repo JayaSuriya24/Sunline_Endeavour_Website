@@ -24,3 +24,10 @@ parentContainer.addEventListener('click', event => {
         "Read Less" : "Read More";
 })
 
+// Script code for drop down content
+var box = document.querySelectorAll(".box");
+for (i = 0; i < box.length; i++) {
+    box[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+    })
+}
