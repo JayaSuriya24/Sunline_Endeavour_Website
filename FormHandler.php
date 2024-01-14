@@ -1,33 +1,37 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $number = $_POST["number"]
+    $message = $_POST["message"];
 
-$name = $_POST['name'];
+    // Simple form validation
+    if (empty($name) || empty($email) || empty($number) || empty($message)) {
+        echo "All fields are required!";
+    } else {
+        // Email configuration
+        $to = "contact@sunlineendeavour.com";
+        $subject = "Enquiry from $name";
+        $headers = "From: $email";
 
-$visitor_email = $_POST['email'];
+        // Compose the email message
+        $email_message = "Name: $name\n";
+        $email_message .= "Email: $email\n\n";
+        $email_message .= "Number: $number\n\n";
+        $email_message .= "Message:\n$message";
 
-$subject = $_POST['subject'];
+        // Send the email
+        $mail_success = mail($to, $subject, $email_message, $headers);
 
-$message = $_POST['message'];
-
-$email_from = 'domain-email id';
-
-$email_subject = 'New Form Submission';
-
-$email_body = "User Name: $name.\n".
-
-              "User Email: $visitor_email.\n".
-
-              "Subject: $subject.\n".
-
-              "User Message: $message .\n";
-
-$to ='admin-mail id';
-
-$headers = "From: $email_from \r\n";
-
-$headers. "Reply-To: $visitor_email \r\n";
-
-mail($to, $email_subject, $email_body, $headers);
-
-header("Location: Index.html");
-
+        if ($mail_success) {
+            echo "Thank you for your enquiry! We will get back to you soon.";
+        } else {
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+    }
+} else {
+    // Redirect to the form if accessed directly
+    header("Location: index.html");
+    exit();
+}
 ?>
