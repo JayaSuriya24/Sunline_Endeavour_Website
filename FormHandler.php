@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "All fields are required!";
     } else {
         // Email configuration
-        $to = "contact@sunlineendeavour.com";
+        $to = "jayasuriya2401@gmail.com";
         $subject = "Enquiry from $name";
         $headers = "From: $email";
 
